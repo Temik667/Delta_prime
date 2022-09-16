@@ -1,0 +1,225 @@
+$greenesh: #15AF0F;
+$green: #8ABD2A;
+$bg: rgb(28, 28, 28);
+nav {
+    background-color: $greenesh;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: $greenesh;
+    border-width: 0;
+
+}
+body {
+    background-color: rgb(28, 28, 28);
+}
+
+
+.jumbo {
+    background-color: $green;
+}
+
+
+.custom_card {
+    border: none;
+    background-color:rgb(28, 28, 28);
+    max-width: 200px;
+    min-height: 300px;
+    color: white;   
+}
+.card-title-custom{
+    text-align: center;
+    font-size: 16px;
+}
+.logo {
+    max-width: 120px;
+}
+.text-points{
+  max-width: 220px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wp-img {
+    max-height: 400px;
+    object-fit: cover;
+}
+.carousel-item img{
+  width: 656px;
+  height: 400px;
+}
+.text-contact {
+  font-size: 20px;
+}
+
+.text-large {
+  text-align: justify;
+  text-indent: 2em;
+}
+
+//VIDEO BACKGROUND
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  /* Media Query for devices withi coarse pointers and no hover functionality */
+  
+  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+  
+    header video {
+      display: none;
+    }
+  }
+
+//MODAL
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  width: 300px; /* You can set the dimensions to whatever you want */
+  height: 200px;
+  object-fit: cover;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+// MEGANAVBAR
+.navbar .megamenu{ padding: 1rem; }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+  .navbar .has-megamenu{position:static!important;}
+  .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+  .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+    overflow-y: auto;
+      max-height: 90vh;
+      margin-top:10px;
+  }
+}
+
+.nav-text {
+  text-decoration: none;
+  color: white;
+}
